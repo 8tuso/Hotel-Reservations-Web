@@ -27,7 +27,6 @@ An innovative hotel reservation platform that leverages artificial intelligence 
   Provides user registration, login, and secure session management.
 - **Dashboards:**  
   - *User Dashboard*: Displays current and previous bookings, profile management, and notifications.  
-  - *Admin Dashboard*: Enables full control over user management, booking edits, and pricing.
 - **API & AI Integration:**  
   Fetches live hotel data and processes it using custom-built AI algorithms for personalized filtering and sorting.
 
