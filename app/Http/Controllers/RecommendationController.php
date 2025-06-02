@@ -298,17 +298,6 @@ class RecommendationController extends Controller
         // --- Step 0.1: Attempt to retrieve from "proceed" cache first ---
         $cachedOffer = Cache::get($proceedCacheKey);
 
-        if ($cachedOffer) {
-            Log::info("Returning cached 'proceed' offer for user session {$userSessionId}.");
-            return view('booking-details', [
-                'offerData' => $cachedOffer,
-                'checkInDate' => $checkInDate,
-                'checkOutDate' => $checkOutDate,
-                'adults' => $adults,
-                'userId' => $userSessionId, // Pass the session ID to the Blade view
-            ]);
-        }
-
         // --- Step 1: Fetch offer details from Amadeus (if not in cache) ---
         Log::info("Step 1: Sending Amadeus Hotel Offers (v3) for single offer details directly by ID: {$offerId}.");
         try {

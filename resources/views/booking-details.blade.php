@@ -584,7 +584,7 @@
             const data = Object.fromEntries(formData.entries());
 
             try {
-                const response = await fetch('/register', {
+                const response = await fetch('/create-user', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

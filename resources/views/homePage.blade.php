@@ -110,7 +110,7 @@
             <nav>
                 <ul class="flex space-x-6">
                     @auth
-                        <li id="dashboardLinkContainer"><a href="#" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors duration-300">Dashboard</a></li>
+                        <li id="dashboardLinkContainer"><a href="{{route('dashboard')}}" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors duration-300">Dashboard</a></li>
                         <li id="dashboardLinkContainer"><a href="{{route('logout')}}" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors duration-300">Logout</a></li>
 
                     @else
@@ -1037,7 +1037,7 @@
             const data = Object.fromEntries(formData.entries());
 
             try {
-                const response = await fetch('/register', {
+                const response = await fetch('/create-user', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

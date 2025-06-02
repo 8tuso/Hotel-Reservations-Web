@@ -58,7 +58,7 @@ Route::post('/payment-confirm',[PaymentController::class, 'confirmPayment'])->na
 Route::post('/create-user', [AuthController::class, 'createUser']);
 Route::post('/user-login', [AuthController::class, 'loginUser'])->name('login');
 
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth'])->group(function (): void {
     Route::get('/dashboard', [UserController::class, 'dashboard'])->name('dashboard');
     Route::put('/profile', [UserController::class, 'updateProfile'])->name('profile.update');
     Route::get('/logout', [AuthController::class, 'logoutUser'])->name('logout');
